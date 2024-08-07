@@ -1,5 +1,5 @@
 {% set name = "hepdata-lib" %}
-{% set version = "0.15.0" %}
+{% set version = "0.16.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/hepdata_lib-{{ version }}.tar.gz
-  sha256: 88325da7e9ee9408eafebb518117ff3c39f438048766f1a19f59ef22f6c6d1d4
+  sha256: bb316bcd984930b23d678d0a0dc78f9d2d8ef38c519e7ca5e31dfec5dd415eb5
 
 build:
   # Will fail on Windows as imagemagick does not support Windows builds, but
