@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/hepdata_lib-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/hepdata_lib-{{ version }}.tar.gz
   sha256: 22b7c188551333025394b83cbc981700ffd0ef7ddfb91708274b9ff496a54a14
 
 build:
@@ -14,15 +14,15 @@ build:
   # failing on a noarch is preferred by the conda-forge maintainers
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - numpy
     - pyyaml >=4.0
     - future
@@ -41,6 +41,7 @@ test:
     # TODO: Add test suite checks with ROOT
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/HEPData/hepdata_lib
