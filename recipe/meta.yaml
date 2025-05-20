@@ -1,5 +1,5 @@
 {% set name = "hepdata-lib" %}
-{% set version = "0.17.0" %}
+{% set version = "0.18.0" %}
 {% set python_min = "3.6" %}
 
 package:
@@ -8,14 +8,14 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/hepdata_lib-{{ version }}.tar.gz
-  sha256: 22b7c188551333025394b83cbc981700ffd0ef7ddfb91708274b9ff496a54a14
+  sha256: f89c154708fbcbf193e505b724ed17b315d837ba2cbda9b82e5bc1f3c77fa90e
 
 build:
   # Will fail on Windows as imagemagick does not support Windows builds, but
   # failing on a noarch is preferred by the conda-forge maintainers
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
