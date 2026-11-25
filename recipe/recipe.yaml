@@ -16,7 +16,7 @@ source:
 build:
   # Will fail on Windows as imagemagick does not support Windows builds, but
   # failing on a noarch is preferred by the conda-forge maintainers
-  number: 0
+  number: 1
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
