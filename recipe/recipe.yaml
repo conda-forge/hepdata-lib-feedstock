@@ -10,7 +10,7 @@ package:
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/hepdata_lib-${{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/${{ name[0] }}/${{ name }}/hepdata_lib-${{ version }}.tar.gz
   sha256: 4f1071d85bc4b8270e95fc96731c05327f0ece13849f1e803a682f052b24e426
 
 build:
