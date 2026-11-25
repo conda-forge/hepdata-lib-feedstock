@@ -126,6 +126,18 @@ mamba repoquery depends hepdata-lib --channel conda-forge
 </details>
 
 
+Optional Dependencies
+---------------------
+
+`hepdata-lib-feedstock` defines the following [CEP-44] optional
+dependency groups:
+
+| Install | Optional Dependencies |
+| --- | --- |
+| `hepdata-lib[extras=root]` | `root_base` |
+
+[CEP-44]: https://github.com/conda/ceps/blob/main/cep-0044.md
+
 
 About conda-forge
 =================
