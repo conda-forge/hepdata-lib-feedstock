@@ -32,7 +32,10 @@ requirements:
     - scipy
     - hepdata-validator >=0.3.5
     - imagemagick
-    # Treat ROOT as an optional dependency and so don't include it
+  extras:
+    # ROOT is optional, so only install it on request (hepdata-lib[extras=[root]])
+    root:
+      - root_base
 
 tests:
   - python:
