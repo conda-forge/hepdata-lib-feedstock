@@ -39,6 +39,9 @@ tests:
       imports:
         - hepdata_lib
       pip_check: true
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
   - requirements:
       run:
         - pip
