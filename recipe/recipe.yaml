@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: hepdata-lib
-  version: "0.21.0"
+  version: "0.21.1"
   python_min: "3.6"
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/hepdata_lib-${{ version }}.tar.gz
-  sha256: 10910f47f246cfb947def37ecd18d60ca71de0f935ec014e60613a9e64918152
+  sha256: 4f1071d85bc4b8270e95fc96731c05327f0ece13849f1e803a682f052b24e426
 
 build:
   # Will fail on Windows as imagemagick does not support Windows builds, but
